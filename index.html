@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:500&display=swap" rel="stylesheet">
+    <title>Pomodoro Learning</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title text-align-center">Pomodoro Time Tracker</h1>
+      <p class="header__credit">Image by Alfmaler - stock.adobe.com</p>
+      <button class="header__add-pomodoro">Add Pomodoro</button>
+    </header>
+    <div class="time-spent">
+      <p class="time-spent__description">Each <img class="pomodor-image image-in-text" src="./img/tomato.svg" alt="Pomodoro" /> = <span class="lesson-length"></span> mins</p>
+      <p class="time-spent__text">Time spent: <span class="time-spent-value"></span> mins</p>
+    </div>
+    <ul class='pomodoros-container'></ul>
+    <div class='loader'>
+      <img class="pomodor-image loader__image-in-loader" src="./img/tomato.svg" alt="Pomodoro" />
+      <p class="loader__text">Loading...</p>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

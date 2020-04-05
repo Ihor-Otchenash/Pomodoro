@@ -1,0 +1,1 @@
+This is a pure JavaScript manual tool for mainly learning (or anything else if you'd like) to track a progress according to Pomodoro Technique. Feel free to try demo here: https://pomodoro-learn.web.app/

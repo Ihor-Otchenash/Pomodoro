@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dancing Script', cursive;
+}
+
+body {
+  background-color: #099F99;
+  font-size: 16px;
+}
+
+.pomodor {
+  padding: 0.925rem;
+  list-style: none;
+}
+
+.pomodor-image {
+  height: 5rem;
+  width: 5rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.image-in-text {
+  height: 3rem;
+  width: 3rem;
+  padding: 0.3rem;
+}
+
+.header {
+  background: url('../img/tomato-background.png') top left repeat;
+  background-size: 425px 425px;
+  min-height: 17.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.375);
+  position: relative;
+}
+
+.header__title {
+  font-size: 3rem;
+}
+
+.header__credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-size: 0.75rem;
+}
+
+.header__add-pomodoro {
+  width: 20%;
+  min-width: 150px;
+  background-color: #C7C7C7;
+  font-size: 1.275rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3);
+  background: #8e9eab; /* fallback for old browsers */
+  background: linear-gradient(to bottom, #eef2f3, #8e9eab);
+}
+
+.header__add-pomodoro:focus {
+  outline: none;
+}
+
+.header__add-pomodoro:hover {
+  cursor: pointer;
+}
+
+.time-spent {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  font-size: 1.125rem;
+}
+
+.time-spent__description {
+  display: flex;
+  align-items: center;
+}
+
+.pomodoros-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader__image-in-loader {
+  animation-name: loading;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 8rem;
+  height: 8rem;
+}
+
+@keyframes loading {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.loader__text {
+  font-size: 3rem;
+  display: block;
+}
