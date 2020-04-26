@@ -25,9 +25,9 @@ body {
 }
 
 .image-in-text {
-  height: 3rem;
-  width: 3rem;
-  padding: 0.3rem;
+  height: 1.375rem;
+  width: 1.375rem;
+  margin: 0 0.25rem;
 }
 
 .header {
@@ -52,7 +52,7 @@ body {
   bottom: 0;
   right: 0;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.5rem;
 }
 
 .header__add-pomodoro {
@@ -76,10 +76,10 @@ body {
   cursor: pointer;
 }
 
-.time-spent {
+.information {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: 0.75rem;
   color: white;
   display: flex;
   flex-direction: row;
@@ -89,9 +89,29 @@ body {
   font-size: 1.125rem;
 }
 
-.time-spent__description {
+.information__description, .information__time-spent {
   display: flex;
   align-items: center;
+}
+
+.time-spent-value {
+  margin: 0 0.25rem;
+}
+
+.information--main-style {
+  font-size: 1.125rem;
+  border: 2px solid #ED7161;
+  border-radius: 25px;
+  background-color: #FFF4DC;
+  color: #D03834;
+  padding: 0.25rem;
+  text-align: center;
+  height: 35px;
+}
+
+.notifications {
+  height: auto;
+  margin: 0.5rem;
 }
 
 .pomodoros-container {
@@ -102,7 +122,7 @@ body {
 }
 
 .loader {
-  background-color: white;
+  background-color: #FFF4DC;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -124,6 +144,56 @@ body {
   height: 8rem;
 }
 
+.notification-container {
+  display: none;
+  background-color: rgba(50, 50, 50, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.notification-popup {
+  max-width: 700px;
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.notification-popup__text {
+  font-size: 3rem;
+}
+
+.notification-popup__close {
+  padding: 0.5rem;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  background-color: #ED7161;
+  color: #FFF4DC;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.notification-popup__close:hover {
+  cursor: pointer;
+}
+
 @keyframes loading {
   from {transform: rotate(0deg);}
   to {transform: rotate(360deg);}
@@ -132,4 +202,24 @@ body {
 .loader__text {
   font-size: 3rem;
   display: block;
+}
+
+@media screen and (max-width: 800px) {
+  .information {
+    flex-wrap: wrap;
+  }
+
+  .information--main-style {
+    font-size: 1rem;
+  }
+
+  .notification-popup__text {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .information--main-style {
+    font-size: 0.875rem;
+  }
 }

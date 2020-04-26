@@ -11,16 +11,23 @@
     <header class="header">
       <h1 class="header__title text-align-center">Pomodoro Time Tracker</h1>
       <p class="header__credit">Image by Alfmaler - stock.adobe.com</p>
-      <button class="header__add-pomodoro">Add Pomodoro</button>
+      <button class="header__add-pomodoro timer">Start Tracking</button>
+      <p class="information--main-style notifications"></p>
     </header>
-    <div class="time-spent">
-      <p class="time-spent__description">Each <img class="pomodor-image image-in-text" src="./img/tomato.svg" alt="Pomodoro" /> = <span class="lesson-length"></span> mins</p>
-      <p class="time-spent__text">Time spent: <span class="time-spent-value"></span> mins</p>
+    <div class="information">
+      <p class="information__description information--main-style">Each <img class="pomodor-image image-in-text" src="./img/tomato.svg" alt="Pomodoro" /> = <span class="lesson-length"></span> mins</p>
+      <p class="information__time-spent information--main-style">Time spent: <span class="time-spent-value"></span> mins</p>
     </div>
     <ul class='pomodoros-container'></ul>
     <div class='loader'>
       <img class="pomodor-image loader__image-in-loader" src="./img/tomato.svg" alt="Pomodoro" />
       <p class="loader__text">Loading...</p>
+    </div>
+    <div class='notification-container'>
+      <div class='notification-popup information--main-style'>
+        <p class='notification-popup__text'>Sorry, you weren't notified because your notifications are disabled or your browser doesn't support them :(</p>
+        <span class='notification-popup__close'><p>X</p></span>
+      </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
