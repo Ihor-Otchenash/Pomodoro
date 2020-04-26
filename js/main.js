@@ -6,9 +6,9 @@ const loader = document.querySelector('.loader');
 lessonLengthField.innerHTML = `&nbsp;${lessonLengthMins}&nbsp;`;
 
 const firebaseApp = firebase.initializeApp({
-  apiKey,
-  authDomain,
-  databaseURL,
+  apiKey: "AIzaSyABsg1z2HxQPQ7FgRLMCg0CA33dgA09enU",
+  authDomain: 'pomodoro-learn.firebaseio.com/',
+  databaseURL: 'https://pomodoro-learn.firebaseio.com/',
 });
 
 const writeTimeSpent = (data) => timeSpent.innerHTML = data.val();
@@ -134,7 +134,7 @@ document.querySelector('.notification-popup__close').addEventListener('click', (
 const timer = document.querySelector('.timer');
 let timerBlocked = false;
 let timerStart = 0;
-const timerStop = 10;
+const timerStop = 25 * 60;
 let timeLeft = timerStop - timerStart;
 
 askPermissionNotification();
